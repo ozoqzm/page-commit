@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-//import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Background = styled.div`
   position: relative;
@@ -87,8 +87,9 @@ const Stamp = styled.div`
   top: 480px;
 `;
 
-const pass = () => {
-  //const location = useLocation(); //뭐냐..
+const Pass = () => {
+  const location = useLocation(); // 사용자가 현재 머물러있는 페이지에 대한 정보
+  const name = location.state;
   return (
     <Background>
       <WhiteBox>
@@ -105,7 +106,7 @@ const pass = () => {
           <br />
           축하합니다!
         </TextBox>
-        <TextUser> 님은</TextUser>
+        <TextUser> {name}님은</TextUser>
         <TextMain>
           동덕여대 멋사 11기에 최종합격 하셨습니다! 🎉
           <br />
@@ -114,7 +115,9 @@ const pass = () => {
           자세한 사항은 discord를 통해 안내드리겠습니다.
           <br />
           <br />
-          https://discord.gg/BSHH7mck
+          <a href="https://discord.gg/BSHH7mck" target="_blank">
+            "https://discord.gg/BSHH7mck"
+          </a>
           <br />
           <br />
           3월 17일까지 디스코드에 들어와주세요! 3/26(일) 동덕 멋사 OT에서
@@ -134,4 +137,4 @@ const pass = () => {
   );
 };
 
-export default pass;
+export default Pass;

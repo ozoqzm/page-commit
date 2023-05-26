@@ -12,7 +12,7 @@ const WhiteBox = styled.div`
   position: absolute;
   width: 297px;
   height: 571px;
-  left: 90px;
+  left: 11%;
   top: 137px;
 
   background: #ffffff;
@@ -43,7 +43,7 @@ const TextBox = styled.div`
   color: #000000;
 `;
 
-const fail = () => {
+const Fail = () => {
   return (
     <Background>
       <WhiteBox>
@@ -95,4 +95,4 @@ const fail = () => {
     </Background>
   );
 };
-export default fail;
+export default Fail;
